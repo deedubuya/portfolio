@@ -1,0 +1,640 @@
+* {
+    font-family: 'Advent Pro', sans-serif;
+    letter-spacing: .1em;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.fa-js {
+    color: gold;
+}
+
+.fa-html5 {
+    color: #F16529;
+}
+
+.fa-css3 {
+    color: #2965f1;
+}
+
+.fa-gulp {
+    color: #DB4446;
+}
+
+.fa-npm {
+    color: #CC3534;
+}
+
+#git-hub {
+    color: #211f1f;
+}
+
+#free-code-camp {
+    color: #acd157;
+}
+
+#linked-in {
+    color: #0077B5;
+}
+
+#code-pen {
+    color: black;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 50vw;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 0px;
+    left: -600px;
+    opacity: 0;
+    width: 100%;
+    background-color: rgba(39, 39, 39, 0.8);
+    color: white;
+    padding-left: 15px;
+    z-index: 9;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.link {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+#prev-button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    padding-top: 5px;
+    background-color: transparent;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+#next-button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    padding-top: 5px;
+    background-color: transparent;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+#prev-button:hover,
+#next-button:hover {
+    background-color: #353535;
+    color: white;
+}
+
+/*Background Images*/
+.slide:first-child {
+    background-image: url("../images/javascriptCert.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide:nth-child(2) {
+    background-image: url("../images/tributePage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide:nth-child(3) {
+    background-image: url("../images/musicSurvey.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide:nth-child(4) {
+    background-image: url("../images/landingPage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#input-section {
+    width: 100%;
+}
+
+#first-name,
+#last-name,
+#email,
+#subject,
+#message {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1rem;
+}
+
+
+/*Mobile first*/
+
+
+@media only screen and (max-width:500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #dedede;
+        background-image: url("../images/macPhone.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .parallax-section {
+        display: none;
+    }
+
+
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        font-size: x-large;
+        background-color: #353535;
+        color: white;
+        z-index: 51;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-padding-start: 0px;
+        padding-inline-start: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #nav-projects {
+        display: none;
+    }
+
+    main {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #welcome-section {
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        width: 100%;
+        height: 100vh;
+        max-width: 385px;
+        background-color: rgba(53, 53, 53, .9);
+        line-height: 1.5rem;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+
+    #quotes-section {
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        display: flex;
+        width: 90%;
+        background-color: rgba(53, 53, 53, .9);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #quote-div::first-letter {
+        font-size: 150%;
+    }
+
+    #author-div {
+        text-align: end;
+        font-size: xx-large;
+    }
+
+    .slider {
+        width: 95vw;
+    }
+
+    #prev-button,
+    #next-button {
+        background-color: white;
+    }
+
+    #hire-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(53, 53, 53, .9);
+    }
+
+    #promote-list {
+        -webkit-padding-start: 0px;
+        padding-inline-start: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #promote-paragraph {
+        font-size: 1.1rem;
+    }
+
+    #inner-toolbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .tools {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-size: small;
+        -webkit-padding-start: 0px;
+        padding-inline-start: 0px;
+    }
+
+    #toolbox>h2 {
+        padding-left: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #pic-div {
+        padding-top: 20px;
+    }
+
+    #profile-pic {
+        width: 70%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+    #social {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #cta-div {
+        background-color: rgba(53, 53, 53, .9);
+        margin-top: 10px;
+    }
+
+    #cta-div>h2 {
+        padding-left: 10px;
+    }
+
+    /* #form-section {
+        display: none;
+    } */
+
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        background-color: rgba(53, 53, 53, .8);
+    }
+
+    #contact-items {
+        display: flex;
+        flex-direction: column;
+        -webkit-padding-start: initial;
+        padding-inline-start: initial;
+    }
+
+    #first-name,
+    #last-name,
+    #email,
+    #subject {
+        width: 100%;
+    }
+
+    #message {
+        width: 100%;
+        height: 300px;
+    }
+
+    #contact-form>h2 {
+        padding-left: 20px;
+    }
+
+    #submit {
+        font-size: 100%;
+        font-family: 'Advent Pro', sans-serif;
+        color: inherit;
+    }
+
+    footer {
+        background-color: #353535;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/*Screens with a minimum width of 501px*/
+@media only screen and (min-width:501px) {
+    body {
+        background-color: #171616;
+        color: #b1b1b1;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        font-size: x-large;
+        background-color: #353535;
+        color: white;
+        z-index: 51;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        -webkit-padding-start: 0px;
+        padding-inline-start: 0px;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    #welcome-section {
+        height: 100vh;
+
+    }
+
+    #about {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    #profile-pic {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+    #bio-div {
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    #quotes-section {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #quote-div {
+        width: auto;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    #author-div {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .parallax-section {
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.90;
+    }
+
+    #par-section1 {
+        background-image: url("../images/parImage1.jpg");
+        height: 500px;
+    }
+
+    #par-section2 {
+        background-image: url("../images/parImage2.jpg");
+        height: 300px;
+    }
+
+    #par-section3 {
+        background-image: url("../images/parImage3.jpg");
+        height: 300px;
+    }
+
+    #par-section4 {
+        background-image: url("../images/parImage4.jpg");
+        height: 400px;
+    }
+
+    #par-section5 {
+        background-image: url("../images/code-coding-conceptual-270360.jpg");
+        height: 300px;
+    }
+
+    .par-text {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        color: white;
+        font-size: 17px;
+        background-color: #171616;
+    }
+
+    .border {
+        width: 100%;
+        font-weight: 700;
+        letter-spacing: 1.2rem;
+        text-transform: uppercase;
+        padding-left: 20px;
+    }
+
+    .project-tile {
+        width: 100%;
+    }
+
+    #hire-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #promote-paragraph {
+        padding-left: 20px;
+    }
+
+    #toolbox>p,
+    #toolbox>h2 {
+        padding-left: 20px;
+    }
+
+    #inner-toolbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .tools {
+        -webkit-padding-start: 0px;
+        padding-inline-start: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 1.3rem;
+    }
+
+    #form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-items {
+        text-align: right;
+    }
+
+    #first-name,
+    #last-name,
+    #email,
+    #subject {
+        width: 300px;
+    }
+
+    #message {
+        width: 300px;
+        height: 300px;
+    }
+
+    #submit {
+        font-size: 100%;
+        font-family: 'Advent Pro', sans-serif;
+    }
+
+    #social {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .fa-github-square,
+    .fa-codepen {
+        color: #cacaca;
+    }
+
+    footer {
+        height: 50px;
+        text-align: center;
+    }
+}
