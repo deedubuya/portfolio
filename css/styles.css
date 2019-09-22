@@ -192,6 +192,9 @@ a:visited {
     font-size: 1.1rem;
 }
 
+ul li {
+    padding: 5px 0px;
+}
 
 /*Mobile first*/
 
